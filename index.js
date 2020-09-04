@@ -59,7 +59,8 @@ client.on('message', (message) => {
       .addBlankField()
       .setTimestamp()
       .setFooter('from 우수한 봇', img)
-
+      
+      message.channel.send(embed)
   }
 
 
