@@ -11,6 +11,7 @@ client.on('ready', () => {
   client.user.setPresence({ game: { name: '저는 우수한 봇 입니다!' }, status: 'online' })
 });
 
+
 client.on("guildMemberAdd", (member) => {
   const guild = member.guild;
   const newUser = member.user;
@@ -37,7 +38,14 @@ client.on('message', (message) => {
   {
 
     return message.reply('참 우수한사람');
+  };
+  
+  if(message.content == '발파루크 참전')
+
+  {
+    retrun .reply('아아')
   }
+
 
   if(message.content == '문재앙') {
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751345991688519700/1586877520.jpeg';
@@ -131,8 +139,7 @@ client.on('message', (message) => {
             return !(_cnt == count);
             
           });
-        }) (message.content == '발파루크 참전') 
-          let img = 'https://cdn.discordapp.com/attachments/606471620802117632/751368178898173972/16e31e8997143091.png'
+        }) 
       }
     } else {
       message.channel.bulkDelete(parseInt(clearLine)+1)
