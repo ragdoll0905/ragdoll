@@ -101,7 +101,7 @@ client.on('message', (message) => {
     } else {
       return message.reply('채널에서 실행해주세요.');
     }
-  } else if(message.content.startsWith('청소')) {
+  } else if(message.content.startsWith('!청소')) {
     if(message.channel.type == 'dm') {
       return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
     }
@@ -109,12 +109,12 @@ client.on('message', (message) => {
     if(message.channel.type != 'dm' && checkPermission(message)) return
 
     var clearLine = message.content.slice('!청소 '.length);
-    var isNum = isNaN(clearLine)
+    var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
       message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return;
-    } else if(isNum) { // c @나긋해 3
+    } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
         if(isNaN(message.content.split(' ')[2])) return;
 
