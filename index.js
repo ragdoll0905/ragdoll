@@ -48,11 +48,10 @@ client.on('message', (message) => {
   };
 
   if(message.content == '자러감' )
-
+    if(message.channel.type == 'dm')
   {
-
     return message.reply('잘자')
-    return message.reply('https://tenor.com/view/funny-animals-cat-kisses-gif-12243490');
+    return message.reply2('https://tenor.com/view/funny-animals-cat-kisses-gif-12243490');
   };
 
   if(message.content == '최지우'){
