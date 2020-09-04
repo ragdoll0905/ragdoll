@@ -39,22 +39,18 @@ client.on('message', (message) => {
     return message.reply('참 우수한사람');
   }
 
-  if(message.content == 'embed') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+  if(message.content == '문재앙') {
+    let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751345991688519700/1586877520.jpeg';
     let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
-      .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setTitle('"MC재앙 대 히트곡"')
+      .setURL('https://youtu.be/tZkREJ1buJs')
+      .setAuthor('"MC재앙 대 히트곡"', img, 'https://youtu.be/tZkREJ1buJs')
       .setThumbnail(img)
       .addBlankField()
-      .addField('Inline field title', 'Some value here')
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
+      .addField('MC재앙 히트곡 정리', 'MC재앙 - Counting Moon\nMC재앙 - 대재앙 문재인\nMC재앙 - 대통령 운지법 쓰신다\nMC재앙 - 청와대와 빨갱이\nMC재앙 - 도라에문의 노래\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
+      .setFooter('from 우수한 봇', img)
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
