@@ -88,27 +88,6 @@ client.on('message', (message) => {
           message.channel.send('**'+message.guild.channels.get(message.channel.id).guild.name+'** 채널 권한이 없어 초대코드 발행 실패')
         }
       })
-  } else if(message.content.startsWith('!전체공지2')) {
-    if(checkPermission(message)) return
-    if(message.member != null) { // 채널에서 공지 쓸 때
-      let contents = message.content.slice('!전체공지2'.length);
-      let embed = new Discord.RichEmbed()
-        .setAuthor('공지 of 콜라곰 BOT')
-        .setColor('#186de6')
-        .setFooter(`콜라곰 BOT ❤️`)
-        .setTimestamp()
-  
-      embed.addField('공지: ', contents);
-  
-      message.member.guild.members.array().forEach(x => {
-        if(x.user.bot) return;
-        x.user.send(embed)
-      });
-  
-      return message.reply('공지를 전송했습니다.');
-    } else {
-      return message.reply('채널에서 실행해주세요.');
-    }
   } else if(message.content.startsWith('!전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
@@ -129,7 +108,7 @@ client.on('message', (message) => {
     
     if(message.channel.type != 'dm' && checkPermission(message)) return
 
-    var clearLine = message.content.slice('청소 '.length);
+    var clearLine = message.content.slice('!청소 '.length);
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
