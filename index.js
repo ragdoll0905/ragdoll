@@ -40,11 +40,12 @@ client.on('message', (message) => {
     return message.reply('참 우수한사람');
   };
   
-  if(message.content == '발파루크 참전')
+  if(message.content == '발파루크참전' )
 
   {
-    retrun .reply('아아')
-  }
+
+    return message.reply('123');
+  };
 
 
   if(message.content == '문재앙') {
