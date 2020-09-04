@@ -47,6 +47,23 @@ client.on('message', (message) => {
     return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/751368178898173972/16e31e8997143091.png');
   };
 
+  if(message.content == '최지우'){
+    let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751461568604274713/unnamed.jpg';
+    let embed = new Discord.RichEmbed()
+      .setTitle('세계 최초 인간 SCP "케테르(Keter)" 등급')
+      .setURL('https://namu.wiki/w/SCP%20%EC%9E%AC%EB%8B%A8/%EC%BC%80%ED%85%8C%EB%A5%B4')
+      .setAuthor('"그는 무력으로 세계 정상에 오를 수 있다" - CSB(진압요원)', img, 'https://namu.wiki/w/%ED%97%9B%EC%86%8C%EB%A6%AC')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('- 그의 역사 -', '삼단봉으로 성 안드레아 진압요원 다수를 살해 후 도주\n그 현장에서 살아남은 HDK 요원의 한 마디 "아무 저항도 할 수 없었다"\n하지만 1급 진압요원 "CSB" 요원으로 인해 다시 격리실 행\n그 후 얼마 지나지 않아 CSB 요원에게 고가의 게임 선물을 공세하고 안전하게 격리실을 탈출 했다고 전해진다.\n괴물의 특징으로는 팔에는 용문신이 있고 너클 장갑을 끼고 다니며 네일배트를 항상 소지하고 다닌다\n\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('from 우수한 봇', img)
+      
+      message.channel.send(embed)
+  }
+
+
   if(message.content == '성안드레아'){
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751394690472869898/bandicam_1184.jpg';
     let embed = new Discord.RichEmbed()
