@@ -73,11 +73,67 @@ client.on('message', (message) => {
     });
 
     embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  } else if(message.content == '!초대코드') {
+    if(message.channel.type == 'dm') {
+      return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
+    }
+    message.guild.channels.get(message.channel.id).createInvite({maxAge: 0}) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
+      .then(invite => {
+        message.channel.send(invite.url)
+      })
+      .catch((err) => {
+        if(err.code == 50013) {
+          message.channel.send('**'+message.guild.channels.get(message.channel.id).guild.name+'** 채널 권한이 없어 초대코드 발행 실패')
+        }
+      })
+  } else if(message.content.startsWith('!전체공지2')) {
+    if(checkPermission(message)) return
+    if(message.member != null) { // 채널에서 공지 쓸 때
+      let contents = message.content.slice('!전체공지2'.length);
+      let embed = new Discord.RichEmbed()
+        .setAuthor('공지 of 콜라곰 BOT')
+        .setColor('#186de6')
+        .setFooter(`콜라곰 BOT ❤️`)
+        .setTimestamp()
+  
+      embed.addField('공지: ', contents);
+  
+      message.member.guild.members.array().forEach(x => {
+        if(x.user.bot) return;
+        x.user.send(embed)
+      });
+  
+      return message.reply('공지를 전송했습니다.');
+    } else {
+      return message.reply('채널에서 실행해주세요.');
+    }
+  } else if(message.content.startsWith('!전체공지')) {
+    if(checkPermission(message)) return
+    if(message.member != null) { // 채널에서 공지 쓸 때
+      let contents = message.content.slice('!전체공지'.length);
+      message.member.guild.members.array().forEach(x => {
+        if(x.user.bot) return;
+        x.user.send(`<@${message.author.id}> ${contents}`);
+      });
+  
+      return message.reply('공지를 전송했습니다.');
+    } else {
+      return message.reply('채널에서 실행해주세요.');
+    }
+  } else if(message.content.startsWith('청소')) {
+    if(message.channel.type == 'dm') {
+      return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
+    }
+    
+    if(message.channel.type != 'dm' && checkPermission(message)) return
+
     var clearLine = message.content.slice('청소 '.length);
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
-      message.channel.send("1부터 100까지의 숫자만 입력해주세요")
+      message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return;
     } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
@@ -100,7 +156,7 @@ client.on('message', (message) => {
     } else {
       message.channel.bulkDelete(parseInt(clearLine)+1)
         .then(() => {
-          AutoMsgDelete(message, `<@${message.author.id}> ` + parseInt(clearLine) + "개의 메시지를 삭제했습니다 (이 메세지는 잠시 후에 사라집니다)");
+          AutoMsgDelete(message, `<@${message.author.id}> ` + parseInt(clearLine) + "개의 메시지를 삭제했습니다. (이 메세지는 잠시 후에 사라집니다.)");
         })
         .catch(console.error)
     }
