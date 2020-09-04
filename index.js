@@ -47,6 +47,22 @@ client.on('message', (message) => {
     return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/751368178898173972/16e31e8997143091.png');
   };
 
+  if(message.content == '성안드레아'){
+    let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751394690472869898/bandicam_1184.jpg';
+    let embed = new Discord.RichEmbed()
+      .setTitle('조선 최초 "최지우(Dol Tin)" 격리시설')
+      .setURL('http://www.standrew.co.kr/')
+      .setAuthor('"성안드레아 공식 사이트"', img, 'http://www.standrew.co.kr/')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('- 업적 -', '2번 실험체 "DolTin" 분노조절장애 완치\n3번 실험체 "채히" 컨테이너 제공\n2번 실험체 "DolTin" 간질병 완치\n2번 실험체 "DolTin"의 기본상식 습득\n1번 실험체 "STG" 경기도의 한 중학교 특별반으로 이송\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('from 우수한 봇', img)
+      
+      message.channel.send(embed)
+  }
+
   if(message.content == '노무현'){
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751392197630230588/hqdefault.jpg';
     let embed = new Discord.RichEmbed()
@@ -59,7 +75,7 @@ client.on('message', (message) => {
       .addBlankField()
       .setTimestamp()
       .setFooter('from 우수한 봇', img)
-      
+
       message.channel.send(embed)
   }
 
