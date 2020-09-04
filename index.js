@@ -58,7 +58,7 @@ client.on('message', (message) => {
     let commandList = [
       {name: '!랙돌', desc: '명령어 도움'},
       {name: '돌틴', desc: '성 안드레아 병원 환자'},
-      {name: '청소 1~100', desc: '채팅 지우기'},
+      {name: '!청소 1~100', desc: '채팅 지우기'},
       {name: '!초대코드', desc: '해당 채널의 초대 코드 표기'},
     ];
     let commandStr = '';
@@ -129,8 +129,10 @@ client.on('message', (message) => {
               ++_cnt;
             }
             return !(_cnt == count);
+            
           });
-        });
+        }) (message.content == '발파루크 참전') 
+          let img = 'https://cdn.discordapp.com/attachments/606471620802117632/751368178898173972/16e31e8997143091.png'
       }
     } else {
       message.channel.bulkDelete(parseInt(clearLine)+1)
