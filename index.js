@@ -47,6 +47,14 @@ client.on('message', (message) => {
     return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/751368178898173972/16e31e8997143091.png');
   };
 
+  if(message.content == '자러감' )
+
+  {
+
+    return message.reply('잘자')
+    return message.reply('https://tenor.com/view/funny-animals-cat-kisses-gif-12243490');
+  };
+
   if(message.content == '최지우'){
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751461568604274713/unnamed.jpg';
     let embed = new Discord.RichEmbed()
