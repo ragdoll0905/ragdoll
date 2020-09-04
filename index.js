@@ -47,6 +47,22 @@ client.on('message', (message) => {
     return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/751368178898173972/16e31e8997143091.png');
   };
 
+  if(message.content == '노무현'){
+    let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751392197630230588/hqdefault.jpg';
+    let embed = new Discord.RichEmbed()
+      .setTitle('"MC무현 대 히트곡"')
+      .setURL('https://www.youtube.com/watch?v=vYibVU6Wbas&feature=youtu.be')
+      .setAuthor('"MC무현 대 히트곡"', img, 'https://www.youtube.com/watch?v=vYibVU6Wbas&feature=youtu.be')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('MC무현 히트곡 정리', 'MC무현 - 봉하반점\nMC무현 - 작은것들을 위한 시\nMC무현 - K/DA(Tak/Jota)\nMC무현 - TT\nMC무현 - 금요일밤\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('from 우수한 봇', img)
+
+  }
+
+
 
   if(message.content == '문재앙') {
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751345991688519700/1586877520.jpeg';
