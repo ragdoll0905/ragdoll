@@ -54,7 +54,7 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '!랙돌') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let helpImg = 'https://cdn.discordapp.com/attachments/751302825778085907/751359002339835944/photo-1592652426510-21aa54446dda.jpg';
     let commandList = [
       {name: '!랙돌', desc: '명령어 도움'},
       {name: '돌틴', desc: '성 안드레아 병원 환자'},
