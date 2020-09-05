@@ -56,7 +56,7 @@ client.on('message', (message) => {
     
   {
     return message.reply('잘자')
-  }
+  };
 
   if(message.content == '김대중'){
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751655186883280998/5e35721d42326b7cf6f8c905c58ec666_11236293615.jpg';
@@ -76,7 +76,7 @@ client.on('message', (message) => {
       .setFooter('from 우수한 봇', img)
 
       message.channel.send(embed)
-  }
+  };
 
 
   if(message.content == '최지우'){
@@ -93,7 +93,7 @@ client.on('message', (message) => {
       .setFooter('from 우수한 봇', img)
       
       message.channel.send(embed)
-  }
+  };
 
 
   if(message.content == '성안드레아'){
