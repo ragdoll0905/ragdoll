@@ -38,46 +38,25 @@ client.on('message', (message) => {
   {
 
     return message.reply('참 우수한사람');
-  }
+  };
   
   if(message.content == '발파루크참전' )
 
   {
 
     return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/751368178898173972/16e31e8997143091.png');
-  }
+  };
 
   if(message.content == '자러간다' )
   
 {
   return message.reply('https://tenor.com/view/funny-animals-cat-kisses-gif-12243490')
-}
+};
   if(message.content == '자러감' )
     
   {
     return message.reply('잘자')
-  }
-
-  if(message.content == '김대중'){
-    let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751655186883280998/5e35721d42326b7cf6f8c905c58ec666_11236293615.jpg';
-    let embed = new Discord.RichEmbed()
-      .setTitle('"MC무현 빽믿는 DJ 도요타 다이쥬"')
-      .setURL('https://www.youtube.com/watch?v=iMB8AlSaLRA')
-      .setAuthor('"Go down fighting to the end"', img, 'https://namu.wiki/w/%ED%99%8D%EC%96%B4')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('대표적인 DJ대중의 표절곡', '')
-      .addField('DJ대중 - 힙조인시티', 'MC무현 - 응디시티 표절', true)
-      .addField('DJ대중 - Up Down', 'MC무현 - 위 아래 표절', true)
-      .addField('DJ대중 - 토요일밤', 'MC무현 - 금요일 밤 표절', true)
-      .addField('DJ대중 히트곡 정리', 'DJ대중 - Excuse Me\nMC무현 - Yeah (Feat. DJ대중)\nMC무현 - BAND (feat. DJ대중, J.Tank, MC재앙)\nMC무현 - K/DA (Feat. DJ대중)\nMC무현 - MC무현 (Ft. Dj대중, J.Tank)\n\n')
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('from 우수한 봇', img)
-
-      message.channel.send(embed)
-  }
-
+  };
 
   if(message.content == '최지우'){
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751461568604274713/unnamed.jpg';
