@@ -101,7 +101,7 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('대표적인 DJ대중의 표절곡', '하아.. 괘씸하거든요')
       .addField('DJ대중 - 힙조인시티', 'MC무현 - 응디시티 표절', true)
-      .addField('DJ대중 - Up Down', 'MC무현 - 위 아래   표절', true)
+      .addField('DJ대중 - Up Down', 'MC무현 - 위   아래 표절', true)
       .addField('DJ대중 - 토요일밤', 'MC무현 - 금요일 밤 표절', true)
       .addField('DJ대중 히트곡 정리', 'DJ대중 - Excuse Me\nMC무현 - Yeah (Feat. DJ대중)\nMC무현 - BAND (feat. DJ대중, J.Tank, MC재앙)\nMC무현 - K/DA (Feat. DJ대중)\nMC무현 - MC무현 (Ft. Dj대중, J.Tank)\n\n')
       .addBlankField()
