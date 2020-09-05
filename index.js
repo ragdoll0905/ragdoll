@@ -99,7 +99,7 @@ client.on('message', (message) => {
       .setAuthor('"Go down fighting to the end"', img, 'https://namu.wiki/w/%ED%99%8D%EC%96%B4')
       .setThumbnail(img)
       .addBlankField()
-      .addField('대표적인 DJ대중의 표절곡', '')
+      .addField('대표적인 DJ대중의 표절곡', '하아.. 괘씸하거든요')
       .addField('DJ대중 - 힙조인시티', 'MC무현 - 응디시티 표절', true)
       .addField('DJ대중 - Up Down', 'MC무현 - 위 아래 표절', true)
       .addField('DJ대중 - 토요일밤', 'MC무현 - 금요일 밤 표절', true)
