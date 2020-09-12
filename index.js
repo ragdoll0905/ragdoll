@@ -59,10 +59,22 @@ client.on('message', (message) => {
     return message.reply('잘자')
   };
 
-if(message.content == '이승민' )
+  if(message.content == '안본눈삽니다'' )
   
 {
-  return message.reply('https://cdn.discordapp.com/attachments/751302825778085907/754296108422922350/Screenshot_20191029-093041_Facebook.jpg')
+  return message.reply('https://cdn.discordapp.com/attachments/751302825778085907/754297773012025384/1599587481.jpg')
+};
+
+if(message.content == '최우수' )
+  
+{
+  return message.reply('https://cdn.discordapp.com/attachments/751302825778085907/754297012333051904/bandicam_1210.jpg')
+};
+
+if(message.content == '응디' )
+  
+{
+  return message.reply('https://cdn.discordapp.com/attachments/751302825778085907/754297299290816513/1587048044.gif')
 };
 
   if(message.content == '최지우'){
