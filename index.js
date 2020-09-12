@@ -59,7 +59,7 @@ client.on('message', (message) => {
     return message.reply('잘자')
   };
 
-  if(message.content == '안본눈삽니다'' )
+  if(message.content == '안본눈삽니다')
   
 {
   return message.reply('https://cdn.discordapp.com/attachments/751302825778085907/754297773012025384/1599587481.jpg')
