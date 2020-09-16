@@ -99,6 +99,22 @@ if(message.content == '응디' )
       message.channel.send(embed)
   }
 
+  
+  if(message.content == '한동균'){
+    let img = 'https://cdn.discordapp.com/attachments/606471620802117632/755847292053094440/unknown.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('"썸썸 편의점 OWNER"')
+      .setURL('http://www.standrew.co.kr/')
+      .setAuthor('"연애는 가상공간에서 해야 빛나는 법" - 대현자 한동균', img, 'http://www.standrew.co.kr/')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('- 업적 -', '최지우가 읽던 라이트 노벨 수십권 강탈')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('from 우수한 봇', img)
+      
+      message.channel.send(embed)
+  }
 
   if(message.content == '성안드레아'){
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751394690472869898/bandicam_1184.jpg';
