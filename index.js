@@ -66,9 +66,15 @@ client.on('message', (message) => {
 };
 
 if(message.content == '히틀러' )
+
+{
+  return message.reply('https://cdn.discordapp.com/attachments/751302825778085907/754297773012025384/1599587481.jpg')
+};
+
+if(message.content == '동균좌' )
   
 {
-  return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/754298800947855410/e928be9dbed4d1e5c1ff21e4fc2dfdceb4c00ce44a877766d92f798789b59bac103170b44887026d5b34903b35b500257e7d.png')
+  return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/755851270320947220/bandicam_1239.jpg')
 };
 
 if(message.content == '최우수' )
