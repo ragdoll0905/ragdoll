@@ -71,7 +71,7 @@ if(message.content == '히틀러' )
   return message.reply('https://cdn.discordapp.com/attachments/751302825778085907/754297773012025384/1599587481.jpg')
 };
 
-if(message.content == '동균좌' )
+if(message.content == '연애하고싶다' )
   
 {
   return message.reply('https://cdn.discordapp.com/attachments/606471620802117632/755851270320947220/bandicam_1239.jpg')
