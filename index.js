@@ -105,7 +105,7 @@ if(message.content == '응디' )
       message.channel.send(embed)
   }
 
-  
+
   if(message.content == '한동균'){
     let img = 'https://cdn.discordapp.com/attachments/606471620802117632/755847292053094440/unknown.png';
     let embed = new Discord.RichEmbed()
@@ -137,6 +137,22 @@ if(message.content == '응디' )
       
       message.channel.send(embed)
   }
+
+if(message.content == 'CSB'){
+  let img = '';
+  let embed = new Discord.RichEmbed()
+    .setTitle('하늘이 내린 살인마')
+    .setURL('')
+    .setAuthor('멈출 수 없는 살인충동', img, '')
+    .setThumbnail(img)
+    .addBlankField()
+    .addField('- 천살성 최서빈의 서사시 -', '선생에게 죽이고 싶지 그럼 안죽이고 싶겠어?  발언\n같은 반 이병윤의 한 마디\n"그와 나는 같은 패도의 길을 걷는다"\n그러나 "정의에 수호자 문정호" 의 심판이 두려워 혈기왕성한 김용은에게 자신에 패배를 인정하고 천살성의 칭호를 반납한다\n수년의 시간이 흐른 뒤 천살성의 칭호를 되찾으려 탱크를 끌고와 학살\n이 사건을 "딸내미충 학살사건" 이라고 부른다고 전해진다\n이자의 특징으로는 히틀러를 존경하며 10M 이상에 부엉이를 끌고다닌다\n마지막으로 성 안드레아의 2번 실험체와의 의형제를 맺었다\n')
+    .addBlankField()
+    .setTimestamp()
+    .setFooter('from 우수한 봇', img)
+
+    message.channel.send(embed)
+}
 
   if(message.content == '김대중'){
     let img = 'https://cdn.discordapp.com/attachments/751302825778085907/751655186883280998/5e35721d42326b7cf6f8c905c58ec666_11236293615.jpg';
